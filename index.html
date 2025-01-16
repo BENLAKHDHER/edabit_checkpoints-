@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-green-500 p-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo on the Left -->
+            <div class="text-white font-bold text-4xl">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar">edabit</span></a>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <div class="hidden md:flex items-center font-semibold space-x-6">
+                <a href="#" class="text-white hover:text-gray-300">Tutorials</a>
+                <a href="#" class="text-white hover:text-gray-300">Challenges</a>
+                <a href="#" class="text-white hover:text-gray-300">Practice</a>
+                <a href="#" class="text-white hover:text-gray-300">Shuffle</a>
+            </div>
+
+            <!-- Right: Bell Icon, Plus Icon, and Search Bar -->
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-white hover:text-gray-300">160 XP</a>
+                <!-- Bell Icon (Notifications) -->
+                <button class="text-white hover:text-gray-300" title="Notifications">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M18 10V7a6 6 0 00-12 0v3a6 6 0 00-2 4.5V15a2 2 0 002 2h12a2 2 0 002-2v-2.5a6 6 0 00-2-4.5zM12 3a4 4 0 014 4v3H8V7a4 4 0 014-4z">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Plus Icon (Add Challenge) -->
+                <button class="text-white hover:text-gray-300" title="Add Challenge">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                </button>
+
+                <!-- Search Bar -->
+                <input type="text" placeholder="Search..."
+                    class="p-2 rounded-full bg-white text-black placeholder-gray-500 w-48 md:w-64">
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-white hover:text-gray-300">Sign In</a>
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Profile"
+                        class="w-8 h-8 rounded-full border-2 border-white">
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none" title="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Links (Hidden by Default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-indigo-600 text-white p-4 space-y-4">
+            <a href="#" class="block">Tutorials</a>
+            <a href="#" class="block">Challenges</a>
+            <a href="#" class="block">Practice</a>
+            <a href="#" class="block">Shuffle</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto flex justify-evenly py-6 px-4">
+        <div class="computer only four wide column">
+            <div class="ui card"><img
+                    src="https://edabit-avatars.s3-us-west-1.amazonaws.com/qj5im3fWyYFzPB5Ar/1736502535270-undefined"
+                    class="ui image no-highlight" alt="User Avatar">
+                <div class="center aligned content" style="background: rgb(243, 244, 245);">
+                    <div
+                        style="color: rgb(45, 184, 75); font-size: 1rem; font-weight: 700; margin-bottom: 2px; margin-top: -14px;">
+                        Level 3
+                    </div>
+                    <div class="header" style="font-size: 1.8rem;">MBENLAKHDHER</div>
+                    <div class="meta" style="font-size: 13px; border-bottom: 1px solid rgb(224, 225, 226);">                      
+                         Joined 6 days ago
+                    </div>
+                    <div class="description" style="margin-bottom: -5px;">
+                        <div>
+                            <p><span>404 bio not found.</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="extra center aligned content no-highlight" style="background: rgb(45, 184, 75);">
+                    <div class="stat-row flex justify-evenly" style="margin-top: 4px;">
+                        <div class ="float: left; width: 50%;">
+                            <div style="color: white; font-size: 1.55rem; font-weight: 700;">160</div>
+                            <div style="color: white; display: inline; font-size: 1.15rem; font-weight: 700;">XP</div>
+                        </div>
+                        <div class="float: left; width: 50%;">
+                            <div style="color: white; font-size: 1.55rem; font-weight: 700;">0</div>
+                            <div style="color: white; display: inline; font-size: 1.15rem; font-weight: 700;">REP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 25px;">
+                <div class="heatmap-container no-highlight hidden-small">
+                           
+                    <div class="heatmap-overlay">
+                        <div class="heatmap-text">
+                            <div class="ui grey statistic" style="margin-right: -5px;">
+                                <div class="value">0</div>
+                                <div class="label" style="color: rgb(118, 118, 118);"><span>Streak</span></div>
+                            </div>
+                            <div class="ui grey statistic">
+                                <div class="value">1</div>
+                                <div class="label" style="color: rgb(118, 118, 118);"><span>Longest</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid gap-6">
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener noreferrer" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        25-Mile Marathon
+                    </h3>
+                    <p class="text-gray-600 mt-2">Mary wants to run a 25-mile marathon. When she attempts to sign up for the marathon, she notices the sign-up sheet doesn't directly state the marathon's length. Instead, the marathon's length is listed in small, different portions. Help Mary find out how long the marathon actually is.
+
+                        Return true if the marathon is 25 miles long, otherwise, return false.</p>
+                        <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                        <code class="font-semibold">function marathonDistance(d) {
+                            let total = 0;
+                        
+                            for (let i = 0; i < d.length; i++) {
+                                if (d[i] < 0) {
+                                    total += -d[i]; 
+                                } else {
+                                    total += d[i]; 
+                                }
+                            }
+                        
+                            return total === 25; 
+                        }</code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">algebra</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">math</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">validation</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener noreferrer" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        How Much is True?
+                    </h3>
+                    <p class="text-gray-600 mt-2">Create a function which returns the number of true values there are in
+                        an array...</p>
+                        
+                        <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                        <code class="font-semibold">function countTrue(arr) {
+                            let count = 0;
+                        
+                            for (let i = 0; i < arr.length; i++) {
+                                if (arr[i] === true) {
+                                    count++; 
+                                }
+                            }
+                        
+                            return count;
+                        }</code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">language_fundamentals</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener noreferrer" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Square Every Digit
+                    </h3>
+                    <p class="text-gray-600 mt-2">Create a function that squares every digit of a number.</p>
+                    <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                    <code class="font-semibold">function squareDigits(n) {
+                        let str = String(n); 
+                        let result = "";
+                    
+                        for (let i = 0; i < str.length; i++) {
+                            let digit = Number(str[i]);
+                            result += (digit * digit); 
+                        }
+                    
+                        return Number(result);
+                    }
+                    </code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">algorithms</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">language_fundamentals</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">math</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">numbers</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener noreferrer" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Array of Multiples
+                    </h3>
+                    <p class="text-gray-600 mt-2">Create a function that takes two numbers as arguments (num, length) and 
+                        returns an array of multiples of num until the array length reaches length.</p>
+                        <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                        <code class="font-semibold">
+                            function arrayOfMultiples(num, length) {
+                                let result = [];
+                            
+                                for (let i = 1; i <= length; i++) {
+                                    result.push(num * i); 
+                                }
+                            
+                                return result;
+                            }
+                        </code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">loops</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">math</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">numbers</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener noreferrer" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Convert Key, Values in an Object to Array
+                    </h3>
+                    <p class="text-gray-600 mt-2">Write a function that converts an object into an array of keys and values.</p>
+                    <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                    <code class="font-semibold">
+                        function objectToArray(obj) {
+                            let result = [];
+                        
+                            for (let key in obj) {
+                                result.push([key, obj[key]]); 
+                            }
+                        
+                            return result;
+                        }
+                    </code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">objects</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener noreferrer" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Special Arrays
+                    </h3>
+                    <p class="text-gray-600 mt-2">An array is special if every even index contains an even number and every odd index contains an odd number. Create a function that returns true if an array is special, and false otherwise.</p>
+                    <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                    <code class="font-semibold">function isSpecialArray(arr) {
+                        for (let i = 0; i < arr.length; i++) {
+                            if (i % 2 === 0 && arr[i] % 2 !== 0) {
+                                return false; 
+                            }
+                            if (i % 2 !== 0 && arr[i] % 2 === 0) {
+                                return false; 
+                            }
+                        }
+                    
+                        return true;
+                    }</code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">conditions</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">higher_order_functions</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">loops</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">validation</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Sum of Cubes
+                    </h3>
+                    <p class="text-gray-600 mt-2">Create a function that takes in an array of numbers and returns the sum of its cubes.</p>
+                    <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                    <code class="font-semibold">function sumOfCubes(nums) {
+                        if (!Array.isArray(nums) || nums.length === 0) {
+                            return 0; 
+                        }
+                    
+                        let sum = 0;
+                    
+                        for (let i = 0; i < nums.length; i++) {
+                            let cube = nums[i] * nums[i] * nums[i];
+                            sum += cube; 
+                        }
+                    
+                        return sum;
+                    }</code>
+
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">algebra</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">geometry</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">loops</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">math</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener" class="block">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Is the Number Symmetrical?
+                    </h3>
+                    <p class="text-gray-600 mt-2">Create a function that takes a number as an argument and returns true or false depending on whether 
+                        the number is symmetrical or not. A number is symmetrical when it is the same as its reverse.</p>
+                        <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                        <code class="font-semibold">
+                            function isSymmetrical(num) {
+                                let str = String(num); 
+                                let len = str.length;
+                            
+                                for (let i = 0; i < len / 2; i++) {
+                                    if (str[i] !== str[len - 1 - i]) {
+                                        return false; 
+                                    }
+                                }
+                            
+                                return true;
+                            }
+                        </code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">language_fundamentals</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener" class="block" title="Edabit Profile">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Filter out Strings from an Array
+                    </h3>
+                    <p class="text-gray-600 mt-2">Create a function that takes an array of non-negative integers and strings and return a new array 
+                        without the strings.</p>
+                        <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                        <code class="font-semibold">function filterArray(arr) {
+                            let result = [];
+                        
+                            for (let i = 0; i < arr.length; i++) {
+                                if (typeof arr[i] === 'number') {
+                                    result.push(arr[i]); 
+                                }
+                            }
+                        
+                            return result;
+                        }
+                        </code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">formatting</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">loops</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <a href="https://edabit.com/user/qj5im3fWyYFzPB5Ar" target="_blank" rel="noopener noreferrer" class="block" title="Edabit Profile">
+                    <h3 class="text-xl font-semibold flex items-center">
+                        <svg width="15px" height="15px" viewBox="0 0 128 128"
+                            style="margin-right: 5px; margin-bottom: -1px;">
+                            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                            <path fill="#323330"
+                                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z">
+                            </path>
+                        </svg>
+                        Find the Smallest and Biggest Numbers
+                        <p class="font-semibold text-2xl text-red-300">Solution :</p>
+                    <p class="text-gray-600 mt-2">Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.</p>
+                    <code class="font-semibold">function findMinAndMax(numbers) {
+                        if (!Array.isArray(numbers) || numbers.length === 0) {
+                            throw new Error("Input must be a non-empty array of numbers.");
+                        }
+                    
+                        let min = numbers[0];
+                        let max = numbers[0];
+                    
+                        for (let i = 1; i < numbers.length; i++) {
+                            if (numbers[i] < min) {
+                                min = numbers[i];
+                            }
+                            if (numbers[i] > max) {
+                                max = numbers[i];
+                            }
+                        }
+                    
+                        return { min, max };
+                    }</code>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                        <div class="flex space-x-2">
+                            <span class="bg-gray-200 px-2 py-1 rounded">arrays</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">language_fundamentals</span>
+                            <span class="bg-gray-200 px-2 py-1 rounded">numbers</span>
+                        </div>
+                        <span class="text-blue-500">Medium</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Get references to the button and mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Add event listener to toggle menu visibility on click
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
