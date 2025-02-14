@@ -1,4 +1,4 @@
-#                                       Edabit_checkpoints Javascript 1
+#                                       Edabit checkpoint Javascript 1
 # 01 - link to edabit profile:
 # https://edabit.com/user/qj5im3fWyYFzPB5Ar
 # 02 - link to exercises:
